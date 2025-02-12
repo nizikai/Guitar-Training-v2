@@ -1,0 +1,2114 @@
+/*
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.visible {
+  visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.-left-0 {
+  left: -0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.float-end {
+  float: inline-end;
+}
+
+.m-11 {
+  margin: 2.75rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.grid {
+  display: grid;
+}
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.basis-1 {
+  flex-basis: 0.25rem;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-normal {
+  justify-content: normal;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.place-self-end {
+  place-self: end;
+}
+
+.place-self-center {
+  place-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.leading-3 {
+  line-height: .75rem;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* MARK: GLOBAL STYLES */
+
+:root {
+  --guitartraining-logo-width: 256px;
+  --guitartraining-logo-height: 153px;
+  --guitartrainingblack-logo-width: 128px;
+  --guitartrainingblack-logo-height: 74px;
+  --plusIconSize: 22px;
+  --editbutton-logo-width: 88px;
+  --editbutton-logo-height: 28px;
+  --card-width: 384px;
+  --card-height: 160px;
+  --gmslive-logo-size: 68px;
+}
+
+.content {
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.searchBar {
+  width: 90vw;
+  /* border:2px solid #aaa; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .3s;
+  background: #E3E3E4;
+  color: #7F7F83;
+}
+
+.ml-5vw {
+  margin-left: 5vw;
+}
+
+.w-90vw {
+  width: 90vw;
+}
+
+/* MARK: ONBOARD */
+
+#guitartrainingLogo {
+  z-index: 1;
+  width: var(--guitartraining-logo-width);
+  height: var(--guitartraining-logo-height);
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+#gmsliveOnboardLogo {
+  z-index: 2;
+  width: var(--gmslive-logo-size);
+  height: var(--gmslive-logo-size);
+  position: fixed;
+  top: 80vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+/* for text content on black-white background */
+
+.textContent {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 90vw;
+  color: white;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.primary {
+  font-size: x-large;
+}
+
+.secondary {
+  opacity: 70%;
+  font-size: medium;
+}
+
+.bold {
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+.spacer {
+  height: 10vh;
+}
+
+/* MARK: LOGIN */
+
+#gmsliveLoginLogo {
+  z-index: 2;
+  width: var(--gmslive-logo-size);
+  height: var(--gmslive-logo-size);
+  position: fixed;
+  top: 20vh;
+  left: 50vw;
+  transform: translate(-50%, -20%);
+}
+
+#login .buttonLong {
+  background-color: #00408C;
+  border-radius: 10px;
+  transform: translate(0, 20vh);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#login .buttonLong:active {
+  background-color: #002654;
+}
+
+#login input {
+  width: 90vw;
+  /* border:2px solid #aaa; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 16px;
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+#login label {
+  margin-top: 8px;
+  margin-left: 5vw;
+  font-size: medium;
+  color: white;
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+#login input:focus {
+  border-color: #D5E7FB;
+  box-shadow: 0 0 8px 0 #D5E7FB;
+}
+
+#loginError {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FF4F4F;
+  text-shadow: 2px 2px 16px #000000;
+}
+
+/* MARK: MENU */
+
+.songSavedSuccess {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 10;
+  overflow-y: hidden;
+}
+
+#guitartrainingMenuLogo {
+  z-index: 1;
+  width: var(--guitartrainingblack-logo-width);
+  height: var(--guitartrainingblack-logo-height);
+  margin-top: 10vh;
+  margin-left: calc(50vw - (var(--guitartrainingblack-logo-width) / 2));
+  margin-bottom: 4vh;
+}
+
+.songContainer {
+  /* background-color: #afafff; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+.songContainer hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.songTitle {
+  font-size: 20px;
+  font-family: 'Gotham-Medium', sans-serif;
+  color: #00408C;
+  width: 68vw;
+}
+
+.songAlbum {
+  font-size: 18px;
+  font-family: 'Gotham-Book', sans-serif;
+  width: 68vw;
+  margin-top: -4px;
+}
+
+.editButton {
+  z-index: 1;
+  width: var(--editbutton-logo-width);
+  height: var(--geditbutton-logo-height);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#addButton {
+  background-color: #D5E7FB;
+  border-radius: 16px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  width: 90vw;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: #00408C;
+  cursor: pointer;
+}
+
+#plusIcon {
+  width: var(--plusIconSize);
+  height: var(--plusIconSize);
+  margin-right: 5vw;
+  scale: 1;
+}
+
+#songContainer {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+/* MARK: REMINDER */
+
+#reminder .buttonLong {
+  background-color: #00408C;
+  /* border-color: #FF7C04;
+  border: 2px solid #FF7C04; */
+  border-radius: 10px;
+  transform: translate(0, 20vh);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.m-5vw {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+}
+
+/* MARK: TRAINING */
+
+.title {
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  color: #00408C;
+  font-size: xx-large;
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+.subtitle {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  color: #000000;
+  opacity: 70%;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+#levelCard {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+#cardText {
+  position: absolute;
+  text-align: left;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 16px;
+  color: white;
+}
+
+#cardTitle {
+  color: white;
+  padding-left: 16px;
+  padding-top: 80px;
+  font-size: x-large;
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+#cardSubtitle {
+  color: white;
+  padding-left: 16px;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+#cardContainer {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+#cardBanner {
+  position: absolute;
+}
+
+/* MARK: SESSION */
+
+.sessionTitle {
+  margin-top: 60vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  color: white;
+  font-size: xx-large;
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+.sessionSubtitle {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  color: white;
+  opacity: 70%;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.sessionHeader {
+  height: 70vh;
+  pointer-events: none;
+  position: relative;
+}
+
+#sessionBackground {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.closeSession {
+  top: 16px;
+  right: 16px;
+  position: fixed;
+}
+
+.sessionStoryPicture {
+  width: 96px;
+  padding: 10px;
+}
+
+.sessionStoryLabel {
+  padding-top: 4px;
+  font-family: 'Gotham-Medium', sans-serif;
+}
+
+.checkmark {
+  width: 40px;
+  height: 40px;
+}
+
+/* MARK: STORY */
+
+.closeStory {
+  top: 44px;
+  right: 16px;
+  position: fixed;
+}
+
+.storyLabel {
+  width: 70vw;
+  position: fixed;
+  color: white;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.storyLabelDark {
+  width: 70vw;
+  position: fixed;
+  color: black;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.slide {
+  position: fixed;
+  display: grid;
+  padding: 00px 0;
+  overflow: hidden;
+}
+
+.slide:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  width: 40%;
+  height: 2px;
+}
+
+.slide-items {
+  position: relative;
+  grid-area: 1/1;
+  overflow: hidden;
+}
+
+.slide-items img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.slide-nav {
+  grid-area: 1/1;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.slide-items>* {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slide-items>.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.slide-nav button {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+
+.slide-thumb {
+  display: flex;
+  grid-column: 1/3;
+  padding: 0 15px;
+}
+
+.slide-thumb>span {
+  flex: 1;
+  display: block;
+  height: 2px;
+  background: #afafaf8b;
+  margin: 3px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.slide-thumb>span.done:after {
+  content: "";
+  display: block;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slide-thumb>span.active:after {
+  content: "";
+  display: block;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  transform: translateX(-100%);
+  animation: thumb 0s forwards linear;
+}
+
+.slide-thumb-dark {
+  display: flex;
+  grid-column: 1/3;
+  padding: 0 15px;
+}
+
+.slide-thumb-dark>span {
+  flex: 1;
+  display: block;
+  height: 2px;
+  background: #afafaf8b;
+  margin: 3px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.slide-thumb-dark>span.done:after {
+  content: "";
+  display: block;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.slide-thumb-dark>span.active:after {
+  content: "";
+  display: block;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 3px;
+  transform: translateX(-100%);
+  animation: thumb 0s forwards linear;
+}
+
+@keyframes thumb {
+  to {
+    transform: initial;
+  }
+}
+
+/* MARK: LEARN */
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.circleBlue {
+  margin-top: 20vh;
+  width: 512px;
+  height: 512px;
+  border: 64px solid #5CB1FF;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.circleGreen {
+  margin-top: 130vh;
+  margin-left: -5vw;
+  width: 512px;
+  height: 512px;
+  border: 64px solid #85E0A3;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: scale(0);
+}
+
+.waveAnimation {
+  animation: wave 1s ease-in infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(4);
+  }
+}
+
+.metronome {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vw;
+  width: 90vw;
+  border: 2px white;
+  border-radius: 16px;
+  display: none;
+}
+
+.displaying {
+  display: block;
+}
+
+#trainingButton img {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vw;
+  width: 90vw;
+}
+
+.chordVisual {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+
+#label-container {
+  display: none;
+}
+
+.progess-container {
+  height: 20vmax;
+  width: 20vmax;
+}
+
+.circular-progress {
+  margin-left: 15vmax;
+  position: relative;
+  height: 20vmax;
+  width: 20vmax;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.circular-progress:before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.value-container {
+  position: relative;
+}
+
+.value-container img {
+  padding: 20%;
+}
+
+#completedTrainingButton {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+
+/* MARK: SONG-FEILD */
+
+#songField .buttonLong {
+  background-color: #00408C;
+  border-radius: 10px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#songField .buttonLong:active {
+  background-color: #002654;
+}
+
+#songField label {
+  margin-top: 8px;
+  margin-left: 5vw;
+  font-size: medium;
+  color: #00408C;
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+#songField input {
+  width: 90vw;
+  /* border:2px solid #aaa; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 16px;
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .3s;
+  background: #E3E3E4;
+}
+
+.largeInput {
+  width: 100vw;
+  height: 50vh;
+  /* margin-left: 5vw;
+  margin-right: 5vw; */
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 16px;
+  outline: none;
+  /* border-radius: 10px; */
+  box-sizing: border-box;
+  transition: .3s;
+  background: #E3E3E4;
+  overflow-y: auto;
+  resize: none;
+  font-size: 0.9rem;
+  font-family: Consolas, monospace;
+}
+
+.largeInput:focus {
+  border-color: #D5E7FB;
+  box-shadow: 0 0 8px 0 #003f8c83;
+}
+
+#songField input[type="text"]:not(:-moz-placeholder-shown) {
+  color: #000000;
+}
+
+#songField input[type="text"]:not(:placeholder-shown) {
+  color: #000000;
+}
+
+#songField input:focus {
+  border-color: #D5E7FB;
+  box-shadow: 0 0 8px 0 #003f8c83;
+}
+
+#songField select {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-indent: 8px;
+  height: 4rem;
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .3s;
+  background: #E3E3E4;
+  color: #000000;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+#addSongSectionButton {
+  background-color: #D5E7FB;
+  border-radius: 10px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: #00408C;
+  cursor: pointer;
+}
+
+/* MARK: EDIT SONG */
+
+.deleteButton {
+  background-color: #FBC8C8;
+  border-radius: 10px;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-bottom: 10vh;
+  width: 50vw;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: red;
+  cursor: pointer;
+}
+
+.updateButton {
+  background-color: #00408C;
+  border-radius: 10px;
+  margin-top: 10vh;
+  margin-bottom: 8px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* MARK: VIEW SONG */
+
+.viewSongHeader {
+  background-color: #D5E7FB;
+  border-radius: 16px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  width: 90vw;
+  padding: 8px;
+  padding-left: 16px;
+}
+
+.songPartPills {
+  background-color: #D5E7FB;
+  border-radius: 100px;
+  margin-left: 5vw;
+  margin-bottom: -10px;
+  width: 30vw;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00408C;
+}
+
+.songContent {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 8px;
+  width: 90vw;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  line-height: 0.5;
+  font-family: Consolas, monospace;
+}
+
+.songContent p.line-even {
+  color: #00408C;
+}
+
+.songContent p.line-odd {
+  color: black;
+}
+
+.transpose-button {
+  background-color: #00408C;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  margin-top: -8px;
+  margin-left: 5vw;
+  width: 35vw;
+  padding: 8px;
+  padding-left: 16px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* MARK: LEARNER FIELD */
+
+#learnerError {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+#togglePasswordText {
+  width: 90vw;
+  margin-left: 5vw;
+  color: #00408C;
+}
+
+.backButton {
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  position: absolute;
+}
+
+/* MARK: SESSION - 5 SONG SEARCH */
+
+#GMSLiveLogoLargeBlack {
+  width: var(--gmslive-logo-size);
+  height: var(--gmslive-logo-size);
+}
+
+.songTitleLearner {
+  font-size: 20px;
+  font-family: 'Gotham-Medium', sans-serif;
+  color: #00408C;
+  width: 90vw;
+}
+
+.songAlbumLearner {
+  font-size: 18px;
+  font-family: 'Gotham-Book', sans-serif;
+  width: 90vw;
+  margin-top: -4px;
+}
+
+.songContainerLearner {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+/* MARK: TEXT STYLES */
+
+/* Gotham Black */
+
+@font-face {
+  font-family: 'Gotham-Black';
+
+  src: url('/fonts/Gotham-Black.otf') format('opentype');
+}
+
+/* Gotham Black Italic */
+
+@font-face {
+  font-family: 'Gotham-BlackItalic';
+
+  src: url('/fonts/Gotham-BlackItalic.otf') format('opentype');
+}
+
+/* Gotham Bold */
+
+@font-face {
+  font-family: 'Gotham-Bold';
+
+  src: url('/fonts/Gotham-Bold.otf') format('opentype');
+}
+
+/* Gotham Bold Italic */
+
+@font-face {
+  font-family: 'Gotham-BoldItalic';
+
+  src: url('/fonts/Gotham-BoldItalic.otf') format('opentype');
+}
+
+/* Gotham Book */
+
+@font-face {
+  font-family: 'Gotham-Book';
+
+  src: url('/fonts/Gotham-Book.otf') format('opentype');
+}
+
+/* Gotham Book Italic */
+
+@font-face {
+  font-family: 'Gotham-BookItalic';
+
+  src: url('/fonts/Gotham-BookItalic.otf') format('opentype');
+}
+
+/* Gotham Light */
+
+@font-face {
+  font-family: 'Gotham-Light';
+
+  src: url('/fonts/Gotham-Light.otf') format('opentype');
+}
+
+/* Gotham Light Italic */
+
+@font-face {
+  font-family: 'Gotham-LightItalic';
+
+  src: url('/fonts/Gotham-LightItalic.otf') format('opentype');
+}
+
+/* Gotham Medium */
+
+@font-face {
+  font-family: 'Gotham-Medium';
+
+  src: url('/fonts/Gotham-Medium.otf') format('opentype');
+}
+
+/* Gotham Medium Italic */
+
+@font-face {
+  font-family: 'Gotham-MediumItalic';
+
+  src: url('/fonts/Gotham-MediumItalic.otf') format('opentype');
+}
+
+/* Gotham Thin */
+
+@font-face {
+  font-family: 'Gotham-Thin';
+
+  src: url('/fonts/Gotham-Thin.otf') format('opentype');
+}
+
+/* Gotham Thin Italic */
+
+@font-face {
+  font-family: 'Gotham-ThinItalic';
+
+  src: url('/fonts/Gotham-ThinItalic.otf') format('opentype');
+}
+
+/* Gotham Ultra */
+
+@font-face {
+  font-family: 'Gotham-Ultra';
+
+  src: url('/fonts/Gotham-Ultra.otf') format('opentype');
+}
+
+/* Gotham Ultra Italic */
+
+@font-face {
+  font-family: 'Gotham-UltraItalic';
+
+  src: url('/fonts/Gotham-UltraItalic.otf') format('opentype');
+}
+
+/* Gotham XLight */
+
+@font-face {
+  font-family: 'Gotham-XLight';
+
+  src: url('/fonts/Gotham-XLight.otf') format('opentype');
+}
+
+/* Gotham XLight Italic */
+
+@font-face {
+  font-family: 'Gotham-XLightItalic';
+
+  src: url('/fonts/Gotham-XLightItalic.otf') format('opentype');
+}
+
+.custom-text {
+  font-family: 'Gotham-BoldItalic', sans-serif;
+  /* Apply Gotham Black font */
+}
+
+.custom-text-italic {
+  font-family: 'Gotham-BlackItalic', sans-serif;
+  /* Apply Gotham Black Italic font */
+}
